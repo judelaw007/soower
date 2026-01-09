@@ -1,11 +1,12 @@
 run = "npm start"
 entrypoint = "backend/src/index.js"
+modules = ["nodejs-18", "web", "nix"]
 
 [env]
 NODE_ENV = "production"
 
 [nix]
-channel = "stable-23_05"
+channel = "stable-25_05"
 
 [deployment]
 run = ["sh", "-c", "npm start"]
