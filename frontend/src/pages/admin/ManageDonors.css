@@ -1,0 +1,177 @@
+.manage-donors {
+  max-width: 1200px;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-form .input {
+  flex: 1;
+  max-width: 400px;
+}
+
+.donors-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.donors-list-card {
+  overflow: hidden;
+}
+
+.donor-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.donor-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.donor-avatar.large {
+  width: 64px;
+  height: 64px;
+  font-size: 1.25rem;
+}
+
+.donor-name {
+  font-weight: 500;
+}
+
+.donor-email {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+tr.selected {
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.donor-details-card {
+  position: sticky;
+  top: 80px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.details-header h3 {
+  font-size: 1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-500);
+  cursor: pointer;
+}
+
+.donor-profile {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.donor-profile .donor-avatar {
+  margin: 0 auto 1rem;
+}
+
+.donor-profile h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.donor-profile p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.details-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: 0.5rem;
+}
+
+.detail-stat {
+  text-align: center;
+}
+
+.detail-stat .label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-bottom: 0.25rem;
+}
+
+.detail-stat .value {
+  font-weight: 600;
+}
+
+.details-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-section h5 {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: var(--gray-700);
+}
+
+.mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mini-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--gray-50);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.empty-text {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .donors-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-details-card {
+    position: static;
+  }
+}

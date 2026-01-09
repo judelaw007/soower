@@ -1,0 +1,25 @@
+.payments-page {
+  max-width: 1000px;
+}
+
+.amount {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.reference {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+@media (max-width: 768px) {
+  table th, table td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .reference {
+    display: none;
+  }
+}
