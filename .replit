@@ -1,5 +1,6 @@
 run = "npm start"
 entrypoint = "backend/src/index.js"
+modules = ["nodejs-20"]
 
 [env]
 NODE_ENV = "production"
@@ -14,3 +15,34 @@ deploymentTarget = "cloudrun"
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[userenv]
+
+[userenv.shared]
+JWT_SECRET = "soower_jwt_secret_key_2024_secure_token"
+NODE_ENV = "production"
+FRONTEND_URL = "https://placeholder.replit.app"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Soower App"
+
+[[workflows.workflow]]
+name = "Soower App"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd backend && node src/index.js"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
