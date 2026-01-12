@@ -34,8 +34,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-brand">
-          <span className="brand-icon">S</span>
-          <span className="brand-text">Soower</span>
+          <svg className="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4L34 12V16L20 24L6 16V12L20 4Z" fill="#F5B800" stroke="#F5B800" strokeWidth="2" strokeLinejoin="round"/>
+            <path d="M20 16L34 24V28L20 36L6 28V24L20 16Z" fill="#F5B800" stroke="#F5B800" strokeWidth="2" strokeLinejoin="round"/>
+            <path d="M20 8L28 13V15L20 20L12 15V13L20 8Z" fill="white" stroke="white" strokeWidth="1" strokeLinejoin="round"/>
+            <path d="M20 20L28 25V27L20 32L12 27V25L20 20Z" fill="white" stroke="white" strokeWidth="1" strokeLinejoin="round"/>
+          </svg>
+          <span className="brand-text">SOOWER</span>
         </Link>
 
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>

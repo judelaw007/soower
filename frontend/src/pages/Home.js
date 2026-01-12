@@ -104,10 +104,15 @@ const Home = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-brand">
-              <span className="brand-icon">S</span>
-              <span>Soower</span>
+              <svg className="footer-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4L34 12V16L20 24L6 16V12L20 4Z" fill="#F5B800"/>
+                <path d="M20 16L34 24V28L20 36L6 28V24L20 16Z" fill="#F5B800"/>
+                <path d="M20 8L28 13V15L20 20L12 15V13L20 8Z" fill="#111827"/>
+                <path d="M20 20L28 25V27L20 32L12 27V25L20 20Z" fill="#111827"/>
+              </svg>
+              <span>SOOWER</span>
             </div>
-            <p>&copy; 2024 Soower. All rights reserved.</p>
+            <p>&copy; 2025 Soower. All rights reserved.</p>
           </div>
         </div>
       </footer>
