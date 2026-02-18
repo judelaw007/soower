@@ -1,0 +1,53 @@
+Phase,Task ID,Task,Description,Status,Priority,Notes
+Setup,1.1,Create project folder structure,Created Soweer project with mobile-app and admin-web-interface folders,DONE,High,
+Setup,1.2,Initialize Expo project,Set up Expo with TypeScript blank template in mobile-app folder,DONE,High,
+Setup,1.3,Install Firebase SDK,Installed firebase and @react-native-async-storage/async-storage,DONE,High,
+Setup,1.4,Install UI dependencies,Installed lucide-react-native and react-native-svg for icons,DONE,High,
+Setup,1.5,Install navigation,Installed expo-router expo-linking expo-constants expo-status-bar,DONE,High,
+Setup,1.6,Create src folder structure,Created config/ components/ screens/ services/ hooks/ types/ folders,DONE,High,
+Setup,1.7,Create Firebase config file,Created src/config/firebase.ts with placeholder values,DONE,High,Needs real Firebase keys
+Setup,1.8,Create TypeScript types,Created src/types/index.ts with Campaign Donation UserProfile types,DONE,Medium,
+Setup,1.9,Create auth service,Created src/services/auth.ts with signIn signOut functions,DONE,High,
+Setup,1.10,Create Firestore service,Created src/services/firestore.ts with campaign and donation queries,DONE,High,
+Setup,1.11,Create mock data,Created src/config/mockData.ts with fallback campaigns,DONE,Medium,
+Setup,1.12,Create entry point App.tsx,Created App.tsx with auth state management and loading screen,DONE,High,
+Setup,1.13,Update app branding,Updated app.json and package.json with Soweer name and green theme,DONE,Medium,
+Setup,1.14,Save prototype reference,Saved original React prototype as src/App.prototype.jsx,DONE,Low,Reference for building screens
+Setup,1.15,Create setup documentation,Created SETUP.md with Firebase setup instructions,DONE,Medium,
+Firebase,2.1,Create Firebase project,Go to Firebase Console and create new project named Soweer,NOT STARTED,High,https://console.firebase.google.com
+Firebase,2.2,Enable Anonymous Auth,In Firebase Console enable Anonymous sign-in method,NOT STARTED,High,Build > Authentication > Sign-in method
+Firebase,2.3,Enable Firestore Database,Create Firestore database in test mode,NOT STARTED,High,Build > Firestore Database
+Firebase,2.4,Get Firebase config keys,Copy firebaseConfig from Project Settings > Your apps,NOT STARTED,High,
+Firebase,2.5,Add config to app,Update src/config/firebase.ts with real Firebase keys,NOT STARTED,High,
+Firebase,2.6,Set Firestore security rules,Add security rules for public campaigns and user donations,NOT STARTED,High,See SETUP.md for rules
+Firebase,2.7,Test app connection,Run npm start and verify Firebase Status shows Connected,NOT STARTED,High,
+Mobile App,3.1,Build Home screen,Convert HomeView from prototype to React Native screen,NOT STARTED,High,Featured campaign + Impact Areas grid
+Mobile App,3.2,Build History screen,Convert HistoryView from prototype to React Native screen,NOT STARTED,High,Donation history list
+Mobile App,3.3,Build Profile screen,Convert ProfileView from prototype to React Native screen,NOT STARTED,High,User stats and account settings
+Mobile App,3.4,Build Donation modal,Convert DonationModal from prototype to React Native,NOT STARTED,High,Amount selection + payment method
+Mobile App,3.5,Implement tab navigation,Set up bottom tab navigation with Home History Profile,NOT STARTED,High,Use expo-router
+Mobile App,3.6,Create reusable Button component,Build Button component with primary secondary outline variants,NOT STARTED,Medium,
+Mobile App,3.7,Create reusable Card component,Build Card component for campaigns and donations,NOT STARTED,Medium,
+Mobile App,3.8,Add campaign images,Implement Image component with loading states,NOT STARTED,Medium,
+Mobile App,3.9,Implement donation flow,Wire up donation modal to Firestore createDonation,NOT STARTED,High,
+Mobile App,3.10,Add pull-to-refresh,Implement refresh on Home and History screens,NOT STARTED,Low,
+Mobile App,3.11,Add loading skeletons,Show skeleton placeholders while data loads,NOT STARTED,Low,
+Mobile App,3.12,Handle offline state,Show offline banner when no internet connection,NOT STARTED,Medium,
+Admin Web,4.1,Save admin prototype,Receive and save admin web interface prototype code,NOT STARTED,High,Waiting for prototype from user
+Admin Web,4.2,Initialize admin project,Set up React/Next.js project in admin-web-interface folder,NOT STARTED,High,
+Admin Web,4.3,Connect to same Firebase,Share Firebase config with admin interface,NOT STARTED,High,
+Admin Web,4.4,Build campaign management,CRUD interface for managing campaigns,NOT STARTED,High,
+Admin Web,4.5,Build donation dashboard,View all donations across users,NOT STARTED,High,
+Admin Web,4.6,Build user management,View and manage registered users,NOT STARTED,Medium,
+Admin Web,4.7,Add admin authentication,Implement admin-only sign-in (email/password or OAuth),NOT STARTED,High,
+Payment,5.1,Research payment providers,Evaluate Paystack Flutterwave for NGN payments,NOT STARTED,High,Nigeria-focused providers
+Payment,5.2,Set up payment provider account,Register and get API keys,NOT STARTED,High,
+Payment,5.3,Implement card payment,Integrate payment SDK for card transactions,NOT STARTED,High,
+Payment,5.4,Implement bank transfer,Generate virtual accounts or show bank details,NOT STARTED,High,
+Payment,5.5,Handle payment webhooks,Set up backend to receive payment confirmations,NOT STARTED,High,May need Cloud Functions
+Deployment,6.1,Configure EAS Build,Set up Expo Application Services for builds,NOT STARTED,Medium,
+Deployment,6.2,Build Android APK,Generate APK for testing,NOT STARTED,Medium,
+Deployment,6.3,Build iOS app,Generate iOS build (requires Apple Developer account),NOT STARTED,Medium,
+Deployment,6.4,Deploy admin to hosting,Deploy admin interface to Firebase Hosting or Vercel,NOT STARTED,Medium,
+Deployment,6.5,Submit to Play Store,Publish Android app to Google Play Store,NOT STARTED,Low,
+Deployment,6.6,Submit to App Store,Publish iOS app to Apple App Store,NOT STARTED,Low,
